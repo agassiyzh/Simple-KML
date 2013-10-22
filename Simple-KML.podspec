@@ -26,8 +26,8 @@ Pod::Spec.new do |s|
   # added to the Pods project. If the pattern is a directory then the
   # path will automatically have '*.{h,m,mm,c,cpp}' appended.
   #
-  s.source_files = 'Classes', 'Classes/**/*.{h,m}'
-  s.exclude_files = 'Classes/Exclude'
+  s.source_files = 'source', 'source/**/*.{h,m}'
+  # s.exclude_files = 'Classes/Exclude'
 
   # A list of file patterns which select the header files that should be
   # made available to the application. If the pattern is a directory then the
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   # target bundle with a build phase script.
   #
   # s.resource  = "icon.png"
-  s.resources = "Resources/*.xcdatamodeld"
+  # s.resources = "Resources/*.xcdatamodeld"
 
   # A list of paths to preserve after installing the Pod.
   # CocoaPods cleans by default any file that is not used.
