@@ -39,6 +39,7 @@
 @implementation SimpleKMLFeature
 
 @synthesize name;
+@synthesize address;
 @synthesize featureDescription;
 @synthesize sharedStyleID;
 @synthesize sharedStyle;
@@ -57,6 +58,9 @@
         {
             if ([[child name] isEqualToString:@"name"])
                 name = [[child stringValue] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            
+            if ([[child name] isEqualToString:@"address"])
+                address = [[child stringValue] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
             else if ([[child name] isEqualToString:@"description"])
                 featureDescription = [[child stringValue] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];

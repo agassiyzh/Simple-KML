@@ -42,6 +42,7 @@
 @interface SimpleKMLFeature : SimpleKMLObject
 
 @property (nonatomic, strong, readonly) NSString *name;
+@property (nonatomic, strong, readonly) NSString *address;
 @property (nonatomic, strong, readonly) NSString *featureDescription;
 @property (nonatomic, strong, readonly) NSString *sharedStyleID;
 @property (nonatomic, strong, readonly) SimpleKMLStyle *inlineStyle;
