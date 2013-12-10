@@ -73,11 +73,7 @@
         sourceURL = URL;
         feature   = nil;
         
-        if ([[[[URL relativePath] pathExtension] lowercaseString] isEqualToString:@"kml"])
-        {
-            source = [NSString stringWithContentsOfURL:URL encoding:NSUTF8StringEncoding error:NULL];
-        }
-        else if ([[[[URL relativePath] pathExtension] lowercaseString] isEqualToString:@"kmz"])
+        if ([[[[URL relativePath] pathExtension] lowercaseString] isEqualToString:@"kmz"])
         {
             NSData *sourceData = [SimpleKML dataFromArchiveAtPath:[URL relativePath] 
                                                      withFilePath:[SimpleKML topLevelKMLFilePathInArchiveAtPath:[URL relativePath]]];
@@ -98,10 +94,7 @@
         }
         else 
         {
-            if (error)
-                *error = [NSError errorWithDomain:SimpleKMLErrorDomain code:SimpleKMLUnknownFileType userInfo:nil];
-            
-            return nil;
+            source = [NSString stringWithContentsOfURL:URL encoding:NSUTF8StringEncoding error:NULL];
         }
         
         NSError *parseError = nil;
