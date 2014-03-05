@@ -1,17 +1,11 @@
-#
-# Be sure to run `pod spec lint Multimove.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# To learn more about the attributes see http://docs.cocoapods.org/specification.html
-#
 Pod::Spec.new do |s|
   s.name         = "Simple-KML"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "Simple KML is a simple & lightweight parsing library for KML written in Objective-C for the iOS platform."
   s.homepage     = "https://github.com/mapbox/Simple-KML"
   s.license      = 'Code Sorcery Workshop, LLC and Development Seed, Inc.'
   s.author      = { 'MapBox' => 'ios@mapbox.com' }
-  s.source       = { :git => "https://github.com/tscheepers/Simple-KML.git" }
+  s.source       = { :git => "https://github.com/agassiyzh/Simple-KML.git", :tag => '0.1.1' }
   s.platform = :ios, '5.0'
   s.source_files = 'source/*.{h,m}'
   s.requires_arc = true
